@@ -130,14 +130,14 @@ nav h2 {
     color: #e3e3e3;
     background-color: #0b0b0b;
     width: 100%;
-    padding: 19px 30px 19px 16px;
-    border: 1px solid rgb(67, 67, 67);
+    padding: 19px 30px 20px 16px;
+    border: 1px solid #C4C7C5;
     border-radius: 3px;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 ::placeholder {
-    font-size: 16px;
+    font-size: 15px;
     color: #e3e3e388;
 }
 
@@ -186,4 +186,69 @@ nav h2 {
     color: rgba(255, 255, 255, 0.598);
 }
 
+/* Floating label styles */
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
 
+.input-wrapper label.floating-label {
+    position: absolute;
+    left: 16px;
+    top: 19px;
+    color: #e3e3e388;
+    font-size: 16px;
+    pointer-events: none;
+    background: #0b0b0b;
+    padding: 0 4px;
+    transition: 
+        top 0.1s ease-in,
+        left 0.1s ease-in,
+        font-size 0.1s ease-in,
+        color 0.1s ease-in;
+}
+
+/* When input is focused or has value, move label up and color it */
+.input-wrapper:focus-within label.floating-label,
+.input-wrapper input:not(:placeholder-shown) + label.floating-label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #A8C7FA;
+    background: #0b0b0b;
+    z-index: 1;
+}
+
+/* When input is NOT focused but has value, label should be gray */
+.input-wrapper:not(:focus-within) input:not(:placeholder-shown) + label.floating-label {
+    color: #C4C7C5;
+}
+
+/* Hide default placeholder */
+.shit .inp1::placeholder {
+    color: transparent;
+}
+
+
+
+/* error */
+
+.error { 
+    color: #F2B8B5;
+    font-size: 9px;
+    display: none; 
+    gap: 5px;
+    align-items: center;
+}
+
+.error img {
+    height: 12px;
+}
+
+/* error state for input and floating label */
+.input-wrapper.error-state .inp1 {
+    border-color: #F2B8B5 !important;
+}
+.input-wrapper.error-state .floating-label {
+    color: #F2B8B5 !important;
+}
