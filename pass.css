@@ -6,13 +6,13 @@
 
 body {
     background-color: #0b0b0b;
-    color: rgb(255, 255, 255);
+    color: #e3e3e3;
     font-family: "Poppins", sans-serif;
 }
 
 a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: #e3e3e3;
 }
 
 /* nav bar */
@@ -92,13 +92,15 @@ nav h2 {
 }
 
 .inpdad {
+    margin: 0px 2px;
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 12px;
 }
 
 .inpdad label {
-    font-size: 13px;
+    font-size: 12px;
+    font-weight: 400;
     color: #e3e3e3;
 }
 
@@ -107,20 +109,20 @@ nav h2 {
     width: 15px;
     height: 15px;
     border-radius: 2px;
-    border: 1px solid gray;
+    border: 2px solid #e3e3e3;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .check:checked {
-    background-color: rgb(54, 54, 211);
-    border: 1px solid gray;
+    background-color: #A8C7FA;
+    border: none;
 }
 
 .check:checked::after {
     content: '✓';
-    color: white;
+    color: rgb(0, 0, 0);
     
 }
 
@@ -128,9 +130,19 @@ nav h2 {
     color: #e3e3e3;
     background-color: #0b0b0b;
     width: 100%;
-    padding: 19px 30px 19px 19px;
+    padding: 19px 30px 19px 16px;
     border: 1px solid rgb(67, 67, 67);
     border-radius: 3px;
+    font-size: 16px;
+}
+
+::placeholder {
+    font-size: 16px;
+    color: #e3e3e388;
+}
+
+.shit .inp1:focus {
+    outline: 1px solid #A8C7FA;
 }
 
 
@@ -148,7 +160,7 @@ nav h2 {
 }
 
 .last .btnx {
-    padding: 12px 20px;
+    padding: 12px 25px;
     border-radius: 35px;
     color: #062E6F;
     background-color: #B6D0FB;
