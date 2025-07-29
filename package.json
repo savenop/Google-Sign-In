@@ -1,0 +1,24 @@
+{
+  "name": "sign-in",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/savenop/Google-Sign-In.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/savenop/Google-Sign-In/issues"
+  },
+  "homepage": "https://github.com/savenop/Google-Sign-In#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
