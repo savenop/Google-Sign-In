@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="admin.css">
+  <style>
+    body {
+      background: #1e1e1e;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      padding: 2rem;
+    }
+    h1 {
+      color: yellow;
+    }
+    pre {
+      background: #2a2a2a;
+      padding: 1rem;
+      border-radius: 8px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <h1>Stored Passwords</h1>
+  <pre id="output">Loading...</pre>
+
+  <script>
+    async function fetchData() {
+      const res = await fetch('/get-passwords');
+      const data = await res.text();
+      document.getElementById('output').textContent = data || "No data yet.";
+    }
+
+    fetchData(); // load initially
+
+    // Optional: refresh every 5 seconds
+    setInterval(fetchData, 5000);
+  </script>
+</body>
+</html>
